@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+        http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.drout</groupId>
+		<artifactId>dasarathi-autodidactic</artifactId>
+		<version>1.2.3-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
+	<groupId>org.drout</groupId>
+	<artifactId>datastructures-and-algorithms</artifactId>
+	<name>datastructures-and-algorithms</name>
+	<version>1.2.3-SNAPSHOT</version>
+    <packaging>jar</packaging>
+	<url>http://maven.apache.org</url>
+
+
+	<dependencies>
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-engine</artifactId>
+		    <version>5.8.2</version>
+		    <scope>test</scope>
+		</dependency>
+
+		<!--  
+		<dependency>
+		    <groupId>org.junit.vintage</groupId>
+		    <artifactId>junit-vintage-engine</artifactId>
+		    <version>5.8.2</version>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <version>5.8.2</version>
+		    <scope>test</scope>
+		</dependency>
+		-->
+	</dependencies>
+
+	<build>
+
+	    <directory>${project.basedir}/target</directory>  
+	    <outputDirectory>${project.build.directory}/classes</outputDirectory>  
+	    <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>  
+	    <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>  
+	    <scriptSourceDirectory>${project.basedir}/src/main/scripts</scriptSourceDirectory>  
+	    <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>  
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
